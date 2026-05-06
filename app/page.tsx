@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { useMusic } from "./layout"; // Sesuaikan path jika perlu
+import { useMusic } from "@/components/ClientWrapper"; // Sesuaikan path jika perlu
 import { ChevronRight } from "lucide-react";
 
 export default function StartPage() {

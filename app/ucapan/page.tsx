@@ -6,14 +6,12 @@ import { MessageSquareQuote, Send, User } from "lucide-react";
 const MESSAGES = [
     {
         from: "Icaa Cantikkk",
-        role: "Anak Pertama",
         text: "Selamat ulang tahun, Pa. Semoga setiap langkahmu selalu dalam lindungan Tuhan, diberikan kesehatan yang baik, rezeki yang lancar, karier yang semakin sukses, dan segala urusan dimudahkan. Semoga selalu diberi kebahagiaan dan umur yang penuh berkah.",
         color: "border-blue-500/50",
     },
     {
         from: "Mr. R",
-        role: "Sosok Belakang Rumah",
-        text: "Selamat ulang tahun Om Marhabang. Semoga Om selalu diberikan kesehatan, rezeki yang lancar, dan segala urusan dimudahkan.",
+        text: "Selamat ulang tahun, Om Marhabang. Semoga Om selalu diberikan kesehatan, rezeki yang lancar, dan segala urusan dimudahkan. Semoga karier Om semakin sukses, selalu diberikan kekuatan dalam memimpin, serta terus mengabdi dengan kehormatan dan kebijaksanaan. Semoga keluarga juga selalu diberikan kebahagiaan, keharmonisan, dan perlindungan dalam setiap langkah.",
         color: "border-green-500/50",
     }
 ];
@@ -70,7 +68,6 @@ export default function UcapanPage() {
                                 </div>
                                 <div>
                                     <h4 className="text-white font-bold text-sm">{msg.from}</h4>
-                                    <p className="text-purple-400 text-[10px] uppercase tracking-tighter">{msg.role}</p>
                                 </div>
                             </div>
                             <p className="text-zinc-300 italic leading-relaxed text-sm">
