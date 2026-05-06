@@ -80,7 +80,7 @@ export default function FinalPage() {
             <h2 className="text-3xl font-bold tracking-tight">Kolonel Marinir Marhabang, S.H., M.Tr.Hanla., M.M., M.Han.</h2>
             <div className="flex items-center justify-center gap-2 text-purple-400 uppercase tracking-[0.4em] text-xs font-bold">
               <ShieldCheck size={14} />
-              <span>Komandan Artileri 2</span>
+              <span>Komandan Resimen Artileri 2</span>
             </div>
           </motion.div>
 
