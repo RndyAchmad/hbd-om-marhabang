@@ -126,6 +126,20 @@ export default function FinalPage() {
           </motion.p>
         </div>
       </motion.div>
+      <footer className="mt-12 text-center text-xs text-zinc-500">
+        <p>
+          © {new Date().getFullYear()} · Crafted with ❤️ by{" "}
+          <a
+            href="https://rendyachmad.my.id"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-purple-400 hover:underline"
+          >
+            rendyachmad.my.id
+          </a>
+        </p>
+      </footer>
     </div>
+
   );
 }
