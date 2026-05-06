@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import ClientWrapper from "@/components/ClientWrapper";
 
 export const metadata = {
-  title: "HBD OM MARHABANG",
+  title: "HBD PAPA MARHABANG",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

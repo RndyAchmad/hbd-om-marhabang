@@ -13,46 +13,46 @@ export default function StartPage() {
     router.push("/game");
   };
 
+  // Edit bagian return di StartPage
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-6 bg-black">
+    <div className="min-h-screen flex items-center justify-center bg-black overflow-hidden relative">
+      {/* Background Decorative Element */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-900 rounded-full blur-[120px]" />
+      </div>
+
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.5 }}
-        className="text-center space-y-12"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="z-10 text-center px-6"
       >
-        <div className="space-y-4">
-          <motion.p
-            initial={{ letterSpacing: "0.1em", opacity: 0 }}
-            animate={{ letterSpacing: "0.5em", opacity: 1 }}
-            className="text-purple-500 text-xs uppercase font-black"
-          >
-            Top Secret Report
-          </motion.p>
-          <h1 className="text-5xl md:text-8xl font-serif italic glow py-2">Untuk Papa Tercinta</h1>
-        </div>
-
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="space-y-8"
+          initial={{ letterSpacing: "0.2em", opacity: 0 }}
+          animate={{ letterSpacing: "0.6em", opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-gold text-[10px] md:text-xs font-black uppercase mb-6"
         >
-          <p className="text-zinc-500 max-w-xs mx-auto italic border-l-2 border-purple-500/30 pl-4">
-            "Dibalik seragam yang gagah, ada hati paling hangat yang selalu menjaga."
-          </p>
-
-          <button
-            onClick={handleStart}
-            className="group relative px-12 py-4 overflow-hidden rounded-full border border-purple-500 text-purple-400 font-bold tracking-[0.2em] transition-all"
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              BUKA PESAN <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-            </span>
-            <div className="absolute inset-0 bg-purple-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            <style jsx>{`.group:hover span { color: white; }`}</style>
-          </button>
+          Strictly Confidential • 2026
         </motion.div>
+
+        <h1 className="text-6xl md:text-9xl font-serif italic mb-8 leading-tight">
+          Untuk Papa <br />
+          <span className="text-purple-500 drop-shadow-2xl">Tercinta</span>
+        </h1>
+
+        <p className="text-zinc-400 max-w-sm mx-auto mb-12 font-light tracking-wide leading-relaxed border-l border-zinc-800 pl-6 text-left italic">
+          "Dibalik seragam yang gagah, ada hati paling hangat yang selalu menjaga kami."
+        </p>
+
+        <button
+          onClick={handleStart}
+          className="group relative px-10 py-4 bg-transparent border border-zinc-700 hover:border-purple-500 transition-all duration-500 rounded-full"
+        >
+          <span className="relative z-10 flex items-center gap-4 text-zinc-400 group-hover:text-white font-bold tracking-[0.3em] text-xs">
+            BUKA PESAN <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </span>
+          <div className="absolute inset-0 bg-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-full" />
+        </button>
       </motion.div>
     </div>
   );

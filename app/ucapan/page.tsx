@@ -5,15 +5,50 @@ import { MessageSquareQuote, Send, User } from "lucide-react";
 
 const MESSAGES = [
     {
-        from: "Icaa Cantikkk",
-        text: "Selamat ulang tahun, Pa. Semoga setiap langkahmu selalu dalam lindungan Tuhan, diberikan kesehatan yang baik, rezeki yang lancar, karier yang semakin sukses, dan segala urusan dimudahkan. Semoga selalu diberi kebahagiaan dan umur yang penuh berkah.",
+        from: "Mama Onie",
+        text: "Selamat ulang tahun suamiku tercinta. Terima kasih ya suamiku yg selalu ada untuk kita,selalu kuatirkan kita,support kita. Di hari spesial ini,doa mama tak pernah putus untuk papa,semoga Allah SWT selalu melimpahkan berkah,kesehatan,rezeki yang halal,bahagia dunia akhirat,makin sayang sama keluarga,tetap rendah hati ya pa. Love u pap😘",
         color: "border-blue-500/50",
     },
     {
-        from: "Mr. R",
+        from: "Icaa Cantikkk",
+        text: "Selamat ulang tahun, Pa. Semoga setiap langkahmu selalu dalam lindungan Allah, diberikan kesehatan yang baik, rezeki yang lancar, karier yang semakin sukses, dan segala urusan dimudahkan. Semoga selalu diberi kebahagiaan dan umur yang penuh berkah.",
+        color: "border-blue-500/50",
+    },
+    {
+        from: "Aisss",
+        text: "HBD Baba, semoga panjang umur, sehat selalu, dan diberikan rezeki yang lancar biar ngasih aku duit terus hehe. Doa in aku terus ya pa, biar aku bisa berubah menjadi lebih baik lagi, aamiin.",
+        color: "border-blue-500/50",
+    },
+    {
+        from: "Zahraa Comel",
+        text: "aku cuman mau mengabadikan kenangan untuk ngasih tau papa seberapa papa sangat berarti untukku. papa bukan hanya papaku, tapi juga pembimbingku, kepercayaanku, dan salah satu teman terbaikku. bimbingan dan dukunganmu sangat berarti buat aku, dan aku sangat bersyukur yang papa telah lakukan. Aku berharap papa mendapatkan ulang tahun yang luar biasa, yang dipenuhi dengan cinta, tawa dan semua hal yang membuat papa bahagia.",
+        color: "border-blue-500/50",
+    },
+    {
+        from: "Dicky",
+        text: "SELAMAT ULANG TAHUN KOMANDAN SEMOGA ULANG TAHUN DI YANG KE 50 INI SELALU DI BERIKAN KE SEHATAN  SELALU DAN PASTI SELALU DI LANCARKAN REJIKANYA DAN SEMOGA KARIER KEDEPANNYA SUKSES SELALU AMIIN (Hormat Komandan) ⚡️",
+        color: "border-purple-500/50",
+    },
+    {
+        from: "Ambi",
+        text: "SELAMAT ULANG TAHUN KOMANDAN SEMOGA SEHAT SELALU DIBERIKAN KESEHATAN UMUR YANG PANJANG SERTA KEKUATAN DAN KEBIJAKSANAAN DALAM MEMIMPIN DAN MEMBERIKAN YANG TERBAIK KEPADA NEGARA DAN BANGSA",
+        color: "border-purple-500/50",
+    },
+    {
+        from: "Edi",
+        text: "Assalamu'alaikum Selamat Malam Komandan mohon ijin saya ucapkan Selamat ulang tahun Komandan mohon ijin Di hari istimewa ini, semoga Komandan mendapatkan kebahagiaan dan kesuksesan berlimpah mohon ijin. Terima kasih atas kepemimpinan dan dedikasi Komandan, Semoga selalu diberkahi keberhasilan Mohon ijin",
+        color: "border-purple-500/50",
+    },
+    {
+        from: "Puti Linglung",
+        text: "selamat ulang tahun om marhabang, terimakasihh sdh izinkan kita sering2 main ke rumah icaa hehe, maaf ya om banyak merepotkan. semoga panjang umur sehat selalu dilancarkan rezekinya. salam dari teman smp kakak ica",
+        color: "border-red-500/50",
+    },
+    {
+        from: "Mas Ren",
         text: "Selamat ulang tahun, Om Marhabang. Semoga Om selalu diberikan kesehatan, rezeki yang lancar, dan segala urusan dimudahkan. Semoga karier Om semakin sukses, selalu diberikan kekuatan dalam memimpin, serta terus mengabdi dengan kehormatan dan kebijaksanaan. Semoga keluarga juga selalu diberikan kebahagiaan, keharmonisan, dan perlindungan dalam setiap langkah.",
         color: "border-green-500/50",
-    }
+    },
 ];
 
 export default function UcapanPage() {
@@ -60,17 +95,24 @@ export default function UcapanPage() {
                         <motion.div
                             key={index}
                             variants={itemVariants}
-                            className={`bg-zinc-900/50 border-l-4 ${msg.color} p-6 rounded-r-2xl backdrop-blur-sm shadow-xl`}
+                            className="glass p-8 rounded-3xl relative group hover:bg-white/[0.05] transition-all"
                         >
-                            <div className="flex items-center gap-3 mb-3">
-                                <div className="p-2 bg-zinc-800 rounded-full">
-                                    <User size={16} className="text-purple-400" />
+                            {/* Quote Icon Background */}
+                            <div className="absolute top-4 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                                <MessageSquareQuote size={40} className="text-purple-400" />
+                            </div>
+
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className="w-10 h-10 bg-gradient-to-tr from-purple-600 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg">
+                                    {msg.from.charAt(0)}
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-bold text-sm">{msg.from}</h4>
+                                    <h4 className="text-white font-bold text-sm tracking-wide">{msg.from}</h4>
+                                    <div className="h-[2px] w-8 bg-purple-500 mt-1" />
                                 </div>
                             </div>
-                            <p className="text-zinc-300 italic leading-relaxed text-sm">
+
+                            <p className="text-zinc-300 italic leading-relaxed text-base font-light">
                                 "{msg.text}"
                             </p>
                         </motion.div>
